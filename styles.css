@@ -48,6 +48,10 @@ body {
   color: #a0a0b0;
   margin-top: 0.5rem;
   text-align: center;
+  max-width: 28ch;
+  margin-left: auto;  
+  margin-right: auto;
+  line-height: 1.5
 }
 
 /* --- CONTENEDOR DE ENLACES --- */
@@ -71,22 +75,25 @@ body {
   background-color: #6a6ac2;
 }
 /* ========================================
-   RESPONSIVE: Tablets y Desktop (768px+)
+   RESPONSIVE: Desktop (>=1200px)
    ======================================== */
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .card {
     /* En pantallas grandes, podemos usar más espacio */
-    max-width: 500px;
+    max-width: 600px;
+    padding: 3rem;
   }
 
   .name {
     /* Título más grande en desktop */
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .link {
     /* Efecto hover solo en desktop (móvil no tiene hover) */
+    font-size: 1.1rem;
+    padding: 1.2rem 1rem;
     transition: transform 0.2s ease;
   }
 
@@ -99,9 +106,19 @@ body {
     font-size: 2rem;
 }
  
-/* DESKTOP (sobrescribe si >= 768px): */
+/* TABLET/DESKTOP (sobrescribe si >= 768px): */
 @media (min-width: 768px) {
   .name {
-        font-size: 2.5rem;  /* Este gana en desktop */
-    }
+        font-size: 2.5rem;
+}
+@media (orientation: landscape) {
+
+  .card {
+    width: 80%;
+  }
+
+  .bio {
+    max-width: 40ch;
+
+}
 }
